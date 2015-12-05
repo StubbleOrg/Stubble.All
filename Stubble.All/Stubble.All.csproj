@@ -90,7 +90,7 @@
       <!-- Must be a fully qualified name -->
       <!--<DoNotInternalizeAssemblies Include="ExampleAssemblyToMerge3" />-->
     </ItemGroup>
-    <ILRepack Parallel="true" Internalize="false" DebugInfo="true" InternalizeExclude="" InputAssemblies="@(InputAssemblies)" TargetKind="Dll" OutputFile="$(OutputPath)\$(AssemblyName).dll" />
+    <ILRepack Parallel="true" Internalize="false" DebugInfo="true" InternalizeExclude="" PrimaryAssemblyFile="$(OutputPath)\Stubble.Core.dll" InputAssemblies="@(InputAssemblies)" TargetKind="Dll" OutputFile="$(OutputPath)\$(AssemblyName).dll" />
     <Delete Files="@(InputAssemblies)" />
   </Target>
   <!-- /ILRepack -->
