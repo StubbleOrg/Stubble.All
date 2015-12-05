@@ -7,7 +7,7 @@ assembly_info:
   assembly_version: $(assembly_version)
   assembly_file_version: $(assembly_version)
   assembly_informational_version: $(assembly_informational_version)
-before_build:
+install:
 - nuget restore
 - ps: >-
     $assembly_version = (Get-Item ".\packages\Stubble.Core.*\lib\net45\Stubble.Core.dll").VersionInfo.ProductVersion
