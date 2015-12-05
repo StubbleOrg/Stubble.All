@@ -30,6 +30,26 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Stubble.Core, Version=1.0.0.119, Culture=neutral, PublicKeyToken=adee431b96d79330, processorArchitecture=MSIL">
+      <HintPath>..\packages\Stubble.Core.1.0.0.119-alpha9\lib\net45\Stubble.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Stubble.Extensions.JsonNet, Version=1.0.0.18, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Stubble.Extensions.JsonNet.1.0.0.18-alpha2\lib\net45\Stubble.Extensions.JsonNet.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Stubble.Extensions.Loaders, Version=1.0.0.9, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Stubble.Extensions.Loaders.1.0.0.9-alpha\lib\net45\Stubble.Extensions.Loaders.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Stubble.Extensions.SystemData, Version=1.0.0.3, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Stubble.Extensions.SystemData.1.0.0.3-alpha\lib\net45\Stubble.Extensions.SystemData.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -40,6 +60,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
