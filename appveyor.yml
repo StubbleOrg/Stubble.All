@@ -1,0 +1,32 @@
+version: 1.0.{build}
+configuration: Release
+platform: Any CPU
+assembly_info:
+  patch: true
+  file: '**\AssemblyInfo.*'
+  assembly_version: $(assembly_version)
+  assembly_file_version: $(assembly_version)
+  assembly_informational_version: $(assembly_informational_version)
+install:
+- ps: >-
+    $assembly_version = (Get-Item ".\packages\Stubble.Core.*\lib\net45\Stubble.Core.dll").VersionInfo.ProductVersion
+
+    $env:assembly_version=$assembly_version;
+    $env:assembly_informational_version=$assembly_version;
+
+    Update-AppveyorBuild -Version $assembly_version;
+before_build:
+- nuget restore
+build:
+  project: Stubble.All.sln
+  publish_nuget: true
+  publish_nuget_symbols: true
+  verbosity: minimal
+artifacts:
+- path: Stubble\bin\$(Configuration)\Stubble.All.dll
+deploy:
+- provider: NuGet
+  api_key:
+    secure: EMoHTW3rc1OUCEnrICn6gxCbaT8a3HSkedN6mbHqOzo1KHQodR13frz6FZwQuweE
+  on:
+    APPVEYOR_REPO_TAG: true
