@@ -7,7 +7,8 @@ assembly_info:
   assembly_version: $(assembly_version)
   assembly_file_version: $(assembly_version)
   assembly_informational_version: $(assembly_informational_version)
-install:
+before_build:
+- nuget restore
 - ps: >-
     $assembly_version = (Get-Item ".\packages\Stubble.Core.*\lib\net45\Stubble.Core.dll").VersionInfo.ProductVersion
 
@@ -15,8 +16,6 @@ install:
     $env:assembly_informational_version=$assembly_version;
 
     Update-AppveyorBuild -Version $assembly_version;
-before_build:
-- nuget restore
 build:
   project: Stubble.All.sln
   publish_nuget: true
