@@ -35,8 +35,8 @@
       <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Stubble.Core, Version=1.0.0.137, Culture=neutral, PublicKeyToken=adee431b96d79330, processorArchitecture=MSIL">
-      <HintPath>..\packages\Stubble.Core.1.0.0.137-alpha12\lib\net45\Stubble.Core.dll</HintPath>
+    <Reference Include="Stubble.Core, Version=1.0.0.141, Culture=neutral, PublicKeyToken=adee431b96d79330, processorArchitecture=MSIL">
+      <HintPath>..\packages\Stubble.Core.1.0.0.141-alpha13\lib\net45\Stubble.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Stubble.Extensions.JsonNet, Version=1.0.0.18, Culture=neutral, processorArchitecture=MSIL">
